@@ -1,77 +1,87 @@
-# Health Website
+# FoodFinder - Health & Fitness Website
 
-Health and fitness website using ReactJs and Sass.
+A comprehensive health and fitness web application built with React.js and Sass, featuring recipe search, calorie calculator, meal planning, and favorites management.
 
-## Docs
+## Features
 
-### Fonts
-Fonts are from google fonts: https://fonts.google.com/
-Fonts used: Courgette, Raleway, poppins
+- 🍽️ **Recipe Search**: Search thousands of recipes using the Edamam Recipe API
+- 🧮 **Calorie Calculator**: Calculate daily calorie needs based on personal metrics
+- 📋 **Meal Planning**: View sample meal plans for different calorie targets
+- ⭐ **Favorites**: Save and manage your favorite recipes
+- 📱 **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- 🎨 **Modern UI**: Clean, intuitive interface with smooth animations
 
-### Icons
+## Quick Start
 
-This project uses Font Awesome icons.
-[Link to Font Awesome](https://fontawesome.com/)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sunilsharma002/foodfinder.git
+   cd foodfinder
+   ```
 
-### Images 
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Home background image:
-- Source: pexels.com by Alleksana 
-- Link: https://www.pexels.com/photo/fresh-papaya-slices-on-white-ceramic-plate-4113866/
+3. **Set up environment variables**
+   Create a `.env` file in the root directory and add your API keys:
+   ```env
+   REACT_APP_EDAMAM_APP_ID=your_edamam_app_id
+   REACT_APP_EDAMAM_APP_KEY=your_edamam_app_key
+   REACT_APP_FORM_SUBMIT_EMAIL_MASK_DEV=your_email@example.com
+   REACT_APP_RAPID_API_HOST=fitness-calculator.p.rapidapi.com
+   REACT_APP_RAPID_API_KEY=your_rapidapi_key
+   ```
 
-Services background image:
-- source: pexels.com by Ella Olsson
-- Link: https://www.pexels.com/photo/fruit-salads-in-plate-1640774/
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-Services images:
-- Source: unDraw
-- Link: https://undraw.co/
+5. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-Recommendation images:
-- Source: pexels.com by Antoni Shkraba
-- Links: 
--- https://www.pexels.com/photo/packed-food-in-colorful-containers-5852326/ 
--- https://www.pexels.com/photo/bread-with-peanut-butter-and-sliced-banana-on-white-ceramic-plate-6823293/
--- https://www.pexels.com/photo/sliced-bread-with-sliced-vegetables-and-fruits-on-white-ceramic-plate-5589027/
+## API Setup
 
-- Source: pexels.com by Roman Odintsov
--- https://www.pexels.com/photo/grilled-vegetables-and-fried-egg-with-beans-and-sausage-4552980/
+### Edamam Recipe API
+1. Visit [Edamam Developer Portal](https://developer.edamam.com/edamam-recipe-api)
+2. Sign up for a free account
+3. Get your App ID and App Key
+4. Add them to your `.env` file
 
-Recipes page background image:
-- Source: pexels.com by Viktoria Slowikowska
-- Link: https://www.pexels.com/photo/assorted-fresh-vegetables-in-messy-composition-5678044/
+### RapidAPI Fitness Calculator
+1. Visit [RapidAPI Fitness Calculator](https://rapidapi.com/malaaddincelik/api/fitness-calculator)
+2. Subscribe to the free plan
+3. Get your API key
+4. Add it to your `.env` file
 
-Tool used to compress images: https://imagecompressor.io/
-#
 ### Contact Form
+1. The contact form uses [FormSubmit](https://formsubmit.co/)
+2. Replace `your_email@example.com` with your actual email
+3. After deployment, activate the form by submitting it once
 
-Contact form is submitted using FORMSUBMIT: https://formsubmit.co/
+## Technologies Used
 
-In this project the contact form is submitted using a fetch post request to the URL: 
-https://formsubmit.co/ajax/[admin email mask here]
+- **Frontend**: React.js, React Router DOM
+- **Styling**: Sass/SCSS, Bootstrap
+- **APIs**: Edamam Recipe API, RapidAPI Fitness Calculator
+- **State Management**: React Context API
+- **Storage**: localStorage for favorites
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts (Courgette, Raleway, Poppins)
+## Available Scripts
 
-admin email mask is found in the admin email email account which is used to activate form submit 
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
 
-The contact form has to be activated whenever deployed. After deployment, when a contact form is submitted the admin will get an activation link in his email, after clicking 'Activate form' the contact form will be activated and the admin will be able to receive feedback / messages.
-#
-### Recipes Search
+## 📞 Support & Contact
 
-Recipes are provided by the Edamam Recipe Search API (https://developer.edamam.com/edamam-recipe-api)
+For questions, issues, or contributions:
+- **GitHub**: [https://github.com/sunilsharma002](https://github.com/sunilsharma002)
+- **Email**: [sunil703354@gmail.com](mailto:sunil703354@gmail.com)
+- **LinkedIn**: [https://www.linkedin.com/in/sunilsharma002/](https://www.linkedin.com/in/sunilsharma002/)
 
-Current Edamam Recipe API service which is being used is the free developer package which provides:
-- 10,000 API calls/month
-- 10 throttling calls/minute
-
-An API call request to the Recipe Search API is made in two cases:
-1) User types a recipe/food/ingredient name and clicks search button
-2) User clicks one of the listed top 10 healthy foods
-
-Recipes are fetched from this URL which requires a query and id + key of the registered package account (https://api.edamam.com/api/recipes/v2?type=public&q=${query}s&app_id=${id}&app_key=${key})
-
-The id and key are found in the registered account Dashboard > Applications > View
-
-Favorite recipes are stored in context api and then stored in localStorage which is done inside the favorites context reducer
-#
-### Calorie Calculator
-
-The calorie calculator uses the Fitness Calculator from RapidAPI (https://rapidapi.com/malaaddincelik/api/fitness-calculator) which is free with unlimited requests
+---
+Made with ❤️ by [Sunil Sharma](https://github.com/sunilsharma002)
